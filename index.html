@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circlemind Query</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.5/dist/purify.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Circlemind Query</h1>
+            <p>Ask questions about your knowledge graph</p>
+        </div>
+
+        <div class="card">
+            <div class="form-group">
+                <label for="graphSelect">Select Knowledge Graph</label>
+                <select id="graphSelect" class="form-control">
+                    <option value="default">Loading graphs...</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="queryInput">Your Question</label>
+                <textarea id="queryInput" class="form-control" placeholder="Enter your query here..."></textarea>
+            </div>
+
+            <button id="submitBtn" class="btn btn-primary btn-block" onclick="executeQuery()">Execute Query</button>
+        </div>
+
+        <div id="error" class="alert alert-danger" style="display: none;"></div>
+
+        <div id="loading" class="loading">
+            <div class="loading-spinner"></div>
+            <p style="margin-top: 1rem;">Processing your query...</p>
+        </div>
+
+        <div id="result" class="result-card">
+            <div class="result-header">
+                Query Result
+            </div>
+            <div class="result-body">
+                <div id="answerContent" class="answer"></div>
+                <div id="referencesSection" style="display: none;">
+                    <div class="references-title">References</div>
+                    <div id="referencesList" class="references-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html> 
