@@ -2,6 +2,9 @@
 
 A clean, modern web application for querying Circlemind knowledge graphs.
 
+<img width="1261" alt="image" src="https://github.com/user-attachments/assets/a83166b8-9c5b-4719-b598-f5eac58d2e58" />
+
+
 ## Features
 
 - Query any Circlemind knowledge graph
